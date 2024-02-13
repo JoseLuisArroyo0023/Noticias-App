@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Noticias.MainPage"
+             >
+
+    <Grid>
+
+            <Grid.RowDefinitions>
+                <!-- Definimos una fila para la imagen que ocupe el espacio necesario -->
+                <RowDefinition Height="Auto" />
+                <!-- Definimos una fila para el resto del contenido que ocupe el espacio restante -->
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+        
+            <Image Source="Noticias.jpg" Aspect="AspectFill" ></Image>
+
+
+        <StackLayout Padding="10" VerticalOptions="Center" HorizontalOptions="FillAndExpand" Grid.Row="1">
+
+        
+            <Label Text="Login" HorizontalOptions="Center" TextColor="Purple" FontSize="Title" FontAttributes="Bold"> </Label>
+         
+            <Entry x:Name="txtUsuario" Placeholder="Usuario" TextColor="Purple" PlaceholderColor="Gray"> </Entry>
+            <Entry x:Name="txtcontraseña" Placeholder="Contraseña" IsPassword="True" TextColor="Purple" PlaceholderColor="Gray"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Ingresar"
+                TextColor="White"
+                BackgroundColor="Purple"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"
+            ></Button>
+
+        
+        </StackLayout>
+
+    </Grid>
+
+
+</ContentPage>
